@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shruti Jha | Portfolio</title>
+  <style>
+    :root {
+      --primary-color: #6a1b9a;
+      --accent-color: #f8bbd0;
+      --hover-color: #ffffff;
+      --text-color: #333;
+      --background-color: #ffffff;
+      --highlight: #ad1457;
+      --footer-bg: #f3e5f5;
+    }
+    body.light-mode {
+      --primary-color: #004d40;
+      --accent-color: #b2dfdb;
+      --hover-color: #ffffff;
+      --text-color: #222;
+      --background-color: #ffffff;
+      --highlight: #26a69a;
+      --footer-bg: #e0f2f1;
+    }
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+    .theme-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background: var(--accent-color);
+      border: none;
+      padding: 0.5rem 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+      z-index: 1001;
+    }
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: var(--primary-color);
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+    nav a {
+      color: var(--accent-color);
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: var(--hover-color);
+    }
+    header {
+      background: var(--primary-color);
+      color: white;
+      text-align: center;
+      padding: 6rem 1rem 3rem;
+      animation: fadeInSlide 1s ease-out forwards;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+    }
+    header p {
+      font-size: 1.3rem;
+      font-style: italic;
+      color: var(--accent-color);
+    }
+    section {
+      padding: 4rem 2rem;
+      max-width: 900px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 1s ease-out forwards;
+    }
+    section:nth-of-type(2) { animation-delay: 0.3s; }
+    section:nth-of-type(3) { animation-delay: 0.6s; }
+    section:nth-of-type(4) { animation-delay: 0.9s; }
+    section:nth-of-type(5) { animation-delay: 1.2s; }
+    section:nth-of-type(6) { animation-delay: 1.5s; }
+    section:nth-of-type(7) { animation-delay: 1.8s; }
+    h2 {
+      color: var(--highlight);
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      border-left: 4px solid var(--highlight);
+      padding-left: 0.5rem;
+      animation: slideRight 0.6s ease-in-out;
+    }
+    .project, .certificate {
+      margin-bottom: 1.5rem;
+      animation: fadeInScale 0.6s ease-out;
+    }
+    .project p, .certificate p {
+      margin: 0.5rem 0;
+    }
+    .certificate a {
+      display: inline-block;
+      margin-top: 0.3rem;
+      color: var(--primary-color);
+      font-weight: bold;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: var(--footer-bg);
+      font-size: 0.95rem;
+      color: var(--text-color);
+      animation: fadeIn 1s ease-out;
+    }
+    a {
+      color: var(--primary-color);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    a:hover {
+      color: var(--highlight);
+    }
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes fadeInScale {
+      0% {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    @keyframes slideRight {
+      0% {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    @keyframes fadeInSlide {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('light-mode');
+    }
+  </script>
+</head>
+<body class="light-mode">
+  <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#certificates">Certificates</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <header>
+    <h1>Shruti Jha</h1>
+    <p>B.Tech Student | Aspiring Data Analyst</p>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p><a href="Resume.pdf" target="_blank" style="font-weight: bold; color: var(--primary-color); text-decoration: underline;">Download My Resume (PDF)</a></p>
+    <p>B.Tech Computer Science student with a focus on AI and Machine Learning, skilled in Power BI and Python. I am passionate about uncovering insights from data and contributing to impactful, real-world projects. Currently seeking opportunities to apply my analytical mindset and technical skills in the IT sector.</p>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <div>
+      <p><strong>Future Interns – Data Science and Analytics Intern (June–July 2025)</strong></p>
+      <ul>
+        <li>Developed dynamic Power BI dashboards to track e-commerce sales and campaign performance.</li>
+        <li>Conducted sentiment analysis on student feedback using Python (TextBlob).</li>
+        <li>Provided actionable insights and data-driven recommendations.</li>
+      </ul>
+    </div>
+    <div>
+      <p><strong>Prodigy Infotech – Data Science Intern (June–July 2025)</strong></p>
+      <ul>
+        <li>Performed exploratory data analysis and built predictive models with Decision Trees.</li>
+        <li>Visualized insights using Seaborn, Matplotlib, and Power BI.</li>
+        <li>Applied NLP techniques for sentiment classification.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <p><strong>E-Commerce Sales Dashboard (Power BI)</strong></p>
+      <p>Interactive dashboard highlighting product-wise and region-wise sales trends. Identified peak seasons and top-performing markets.</p>
+    </div>
+    <div class="project">
+      <p><strong>Social Media Campaign Tracker</strong></p>
+      <p>Tracked performance across platforms using CTR and ROI. Found affiliate marketing as the top revenue channel.</p>
+    </div>
+    <div class="project">
+      <p><strong>Event Feedback Sentiment Analysis (Python, TextBlob)</strong></p>
+      <p>Analyzed student survey data for satisfaction insights. Identified low-rated areas to guide improvements.</p>
+    </div>
+    <div class="project">
+      <p><strong>Titanic Dataset EDA</strong></p>
+      <p>Explored survival correlations using Python visualizations. Derived insights from demographic trends.</p>
+    </div>
+    <div class="project">
+      <p><strong>Customer Purchase Prediction (Decision Tree)</strong></p>
+      <p>Built a classification model on UCI Bank data to predict marketing outcomes.</p>
+    </div>
+  </section>
+
+  <section id="certificates">
+    <h2>Certificates & Letter of Recommendation</h2>
+    <div class="certificate">
+      <p><strong>AI Agent Workshop – Microsoft</strong></p>
+      <a href="AiAggent_Workshop_MS.pdf" target="_blank">View Certificate (PDF)</a>
+    </div>
+    <div class="certificate">
+      <p><strong>Future Interns – Internship Certificate</strong></p>
+      <a href="FutureInterns_Internship_Certificate.pdf" target="_blank">View Certificate (PDF)</a>
+    </div>
+    <div class="certificate">
+      <p><strong>IBM – Data Analytics Essentials</strong></p>
+      <a href="IBM_DataAnalysis_Badge.png" target="_blank">View Certificate (Image)</a>
+    </div>
+    <div class="certificate">
+      <p><strong>Coding Blocks – DSA in Java using System Design</strong></p>
+      <a href="CodingBlocks_certificate.jpeg" target="_blank">View Certificate (Image)</a>
+    </div>
+    <div class="certificate">
+      <p><strong>Letter of Recommendation – Future Interns</strong></p>
+      <a href="FutureInterns_LoR.pdf" target="_blank">View LOR (PDF)</a>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:reachshrutijha2004@gmail.com">reachshrutijha2004@gmail.com</a></p>
+    <p>Phone: +91-9046081825</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/shruti-jha-000a6a275" target="_blank">linkedin.com/in/shruti-jha-000a6a275</a></p>
+    <p>Location: New Delhi, India</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Shruti Jha. All rights reserved.</p>
+  </footer>
+</body>
+</html>
